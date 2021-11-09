@@ -1,0 +1,79 @@
+CYPRESS
+
+-Cypress io bir node js kutuphanesidir
+-Cypress kullanmak icin node-js 'e ihtiyacimiz vardir
+
+-Visual Studio indiriyoruz 
+-herhangi bir yerde cypress adinda folder acip onu VS'ye entegre ediyoruz
+-vs'nin terminal bolumune "npm install cypress --save-dev" yazarak cypress kuruyoruz
+--yukleme tamamlaninca terminale "npx cypress open"  yaziyoruz
+--tekrar bi yukleme ardindan cypess penceresi acilacak
+
+
+---VS icinde Cypress dosyasi icindeki fixtures dosyasi icinde json datalar tutulur
+ seleniumdaki configuration properties gibi ornegin belli isim soyisim gibi sabit verileri tutar
+
+--integration dosyasi test kosulurken aranan spec dosyasi var mi diye bakilan yer
+-bu yuzden yazilan butun testlerin integration klasoru altinda oldiguna dikkat etmeliyiz
+
+--plugin dosyasi cesitli eklentilerin configutaionlarinin yapildigi klasordur 
+--ornek bir browser baslatilacaksa hangi ayarlarla baslatilacak onun configuration 'u yapilabilir
+
+--support dosyasinda ozellestrebilecegimoz komitlar kullanabilirz
+--support command dosyasinda ==>
+--ornek bir login islemi yapilacak onun inputlarinin girilmesi , butona tiklanmasi ve login islemi 
+oldu mu diye kontrol edilmesi gibi bir kalibi tek bir komut haline getirip burada tutabilirz ve 
+projenin herhangi bir yerinde cagirabilirz
+
+
+--index.js projenin geneline hukmetmemiz gereken durumlarda kullanmamiz gereken komutlari burada yaziyoriz
+--orn test senaryolari oncesi calismasi gerekn bazi komutlar
+
+--node modul clasorunde npm paketlerinin bulundugu klasor
+
+
+--cypress.json --testler hangi url de kosacak--tarayici hangi cozunurlukte olacak--time out ne kadar olacak
+ gibi genel konular burada belirlenir
+
+
+--------------Ders07-------
+skip ve only methodlari
+--------------------------Ders08
+eger cypress.json icinde bir degisiklik yapilirsa acik olan browser kapanir testi yeniden calistirmak gerekir
+
+
+-------ders09
+base url si ayni olan iki farkli url e gitmek istiyorsak  ayni test blogunu kullaniriz 
+ama tamamen iki farkli url varsa afrkli test blogu kullanmaliyiz
+
+---------ders10---
+---------farkli browserlarda run etmek icin once cypress penceresini kapat
+sonra terminale  "npx cypress run --browser chrome" yada  npx cypress run --browser  edge gibi farkli borxserlarda run edebilriiz
+--burdaki butun spec dosyalarini calistirir
+
+--terminalde test sonuclarinin raporlarini gorebilriz
+
+ context ==>çalışmakta olan kodu ve onu çalıştırmaya yardımcı olan diğer her şeyi ifade eder.
+describe() : Testlerimizi gruplandırmanın basit bir yoludur. İki argüman alır, ilki test grubunun adıdır ve ikincisi bir geri çağırma işlevidir .
+context() : Sadece tarif() için bir takma addır.
+it() : Bireysel bir test durumu için kullanıyoruz. Testin ne yapması gerektiğini açıklayan bir dize ve gerçek testimizi içeren bir geri arama işlevi olmak üzere iki argüman alır.
+
+
+-----------------CSSS LOCATERS
+#id
+.class
+attribute=value
+tagname#idname [OR]
+tagname.classname [OR]
+tagname[attribute=value]
+
+
+///xpath i cypress a tanitmak icin  google 'a cypress xpath  yazip npm ile ilguli olan
+"npm install -D cypress-xpath" komutu terminale yaziyoruz
+support icindeki index.js dosyasina da "require('cypress-xpath')" eklentiyi ekliyoruz
+
+
+
+
+
+
